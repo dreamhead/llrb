@@ -1,0 +1,33 @@
+h1. LLRB
+
+"Ye Zheng":mailto:dreamhead.cn@gmail.com
+
+h2. Overview
+
+"LLRB":https://github.com/dreamhead/llrb is "LLVM":http://llvm.org/ bindings for "Ruby":http://www.ruby-lang.org/.
+
+h2. Build
+
+h3. Installing LLVM
+
+"Download":http://llvm.org/releases/ the latest LLVM, and then build/install LLVM with the following steps:
+* cd llvm
+* mkdir build
+* cmake .. -DCMAKE_INSTALL_PREFIX=/opt
+* make
+* sudo make install
+
+After installing, add the LLVM bin to the PATH:
+* export LLVM_HOME=/opt/llvm
+* export PATH=$LLVM_HOME/bin:$PATH
+
+h3. Build LLRB
+
+To build LLRB, run rake in LLRB folder:
+* rake build
+
+To clean:
+* rake clean
+
+To run tests:
+* rake spec
