@@ -13,8 +13,8 @@ VALUE llrb_module_allocate(VALUE klass) {
 }
 
 VALUE llrb_module_initialize(VALUE self, VALUE rname) {
-  // Check_Type(rname, T_STRING);
-  // DATA_PTR(self) = new Module(StringValuePtr(rname), getGlobalContext());
+  Check_Type(rname, T_STRING);
+  DATA_PTR(self) = new Module(StringValuePtr(rname), getGlobalContext());
   return self;
 }
 
